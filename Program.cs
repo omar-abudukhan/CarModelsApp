@@ -1,7 +1,12 @@
+using Application.Common;
+using Domain.Common;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.InjectApplication(); 
 
 var app = builder.Build();
 
